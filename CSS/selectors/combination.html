@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Combinator Selectors</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    h2 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .box {
+      background-color: #eef3f8;
+      padding: 12px;
+      border-left: 5px solid #2980b9;
+      margin-top: 10px;
+    }
+
+    /* ===== COMBINATOR SELECTORS ===== */
+
+    /* 1. Descendant Selector (space) */
+    .descendant p {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* 2. Child Selector (>) */
+    .child > p {
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* 3. Adjacent Sibling Selector (+) */
+    .adjacent h3 + p {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* 4. General Sibling Selector (~) */
+    .general h3 ~ p {
+      color: purple;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>CSS Combinator (Combination) Selectors</h1>
+
+  <p>
+    Combinator selectors are used to select elements based on their
+    relationship with other elements. They help apply styles more precisely.
+  </p>
+
+  <!-- Descendant Selector -->
+  <h2>1. Descendant Selector (space)</h2>
+  <p>
+    The descendant selector selects all elements that are inside another
+    element, no matter how deeply nested.
+  </p>
+
+  <div class="box descendant">
+    <p>This paragraph is inside the div</p>
+    <div>
+      <p>This paragraph is deeply nested</p>
+    </div>
+  </div>
+
+  <!-- Child Selector -->
+  <h2>2. Child Selector (&gt;)</h2>
+  <p>
+    The child selector selects only direct children of a specified element.
+  </p>
+
+  <div class="box child">
+    <p>This is a direct child (styled)</p>
+    <div>
+      <p>This is not a direct child (not styled)</p>
+    </div>
+  </div>
+
+  <!-- Adjacent Sibling Selector -->
+  <h2>3. Adjacent Sibling Selector (+)</h2>
+  <p>
+    The adjacent sibling selector selects the first element that comes
+    immediately after another element.
+  </p>
+
+  <div class="box adjacent">
+    <h3>Heading</h3>
+    <p>This paragraph is immediately after h3 (styled)</p>
+    <p>This paragraph is not adjacent (not styled)</p>
+  </div>
+
+  <!-- General Sibling Selector -->
+  <h2>4. General Sibling Selector (~)</h2>
+  <p>
+    The general sibling selector selects all sibling elements that come
+    after a specified element.
+  </p>
+
+  <div class="box general">
+    <h3>Heading</h3>
+    <p>This paragraph is styled</p>
+    <p>This paragraph is also styled</p>
+  </div>
+
+  <!-- Summary -->
+  <h2>Summary</h2>
+  <p>
+    Combinator selectors allow developers to target elements based on
+    hierarchy and position, making CSS more powerful and flexible.
+  </p>
+
+</div>
+
+</body>
+</html>

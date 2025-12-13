@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Explained</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .box {
+      background-color: #eef3f8;
+      padding: 12px;
+      border-left: 5px solid #2980b9;
+      margin-top: 10px;
+    }
+
+    /* Selector Examples */
+
+    /* Element Selector */
+    span {
+      color: purple;
+      font-weight: bold;
+    }
+
+    /* Class Selector */
+    .class-example {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* ID Selector */
+    #id-example {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* Group Selector */
+    h3, h4 {
+      color: #d35400;
+    }
+
+    /* Universal Selector */
+    .universal * {
+      font-style: italic;
+    }
+
+    /* Attribute Selector */
+    input[type="text"] {
+      border: 2px solid #2980b9;
+      padding: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>CSS Selectors</h1>
+
+  <p>
+    CSS selectors are used to select HTML elements and apply styles to them.
+    They tell the browser <strong>which HTML elements</strong> should be styled.
+  </p>
+
+  <!-- Element Selector -->
+  <h2>1. Element Selector</h2>
+  <p>
+    The element selector selects HTML elements based on their tag name.
+  </p>
+  <div class="box">
+    <p>This is a <span>span element</span> styled using an element selector.</p>
+  </div>
+
+  <!-- Class Selector -->
+  <h2>2. Class Selector</h2>
+  <p>
+    The class selector selects elements with a specific class name.
+    It is reusable and starts with a dot (<strong>.</strong>).
+  </p>
+  <div class="box">
+    <p class="class-example">This text uses a class selector</p>
+  </div>
+
+  <!-- ID Selector -->
+  <h2>3. ID Selector</h2>
+  <p>
+    The ID selector selects a unique element.
+    It starts with a hash (<strong>#</strong>) and should be used only once.
+  </p>
+  <div class="box">
+    <p id="id-example">This text uses an ID selector</p>
+  </div>
+
+  <!-- Group Selector -->
+  <h2>4. Group Selector</h2>
+  <p>
+    The group selector styles multiple elements at the same time using commas.
+  </p>
+  <div class="box">
+    <h3>This is Heading 3</h3>
+    <h4>This is Heading 4</h4>
+  </div>
+
+  <!-- Universal Selector -->
+  <h2>5. Universal Selector</h2>
+  <p>
+    The universal selector (<strong>*</strong>) selects all elements.
+  </p>
+  <div class="box universal">
+    <p>This paragraph is italic</p>
+    <span>This span is also italic</span>
+  </div>
+
+  <!-- Attribute Selector -->
+  <h2>6. Attribute Selector</h2>
+  <p>
+    The attribute selector selects elements based on an attribute and its value.
+  </p>
+  <div class="box">
+    <input type="text" placeholder="Styled using attribute selector">
+  </div>
+
+  <!-- Conclusion -->
+  <h2>Conclusion</h2>
+  <p>
+    CSS selectors are a powerful way to target HTML elements.
+    By using the right selector, developers can write clean, reusable,
+    and efficient styles.
+  </p>
+
+</div>
+
+</body>
+</html>
