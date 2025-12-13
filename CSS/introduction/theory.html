@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introduction to CSS</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f7;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    h2 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .example {
+      background-color: #eef3f8;
+      padding: 10px;
+      border-left: 5px solid #2980b9;
+      margin-top: 10px;
+    }
+
+    .internal-text {
+      color: blue;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Introduction to CSS</h1>
+
+    <!-- Importance of CSS -->
+    <h2>Importance of CSS</h2>
+    <p>
+      CSS (Cascading Style Sheets) is used to control the appearance of web
+      pages. Without CSS, websites would look plain and unstructured.
+      CSS makes websites attractive, readable, and user-friendly.
+    </p>
+
+    <ul>
+      <li>Improves the visual design of web pages</li>
+      <li>Makes content easy to read and understand</li>
+      <li>Helps create responsive layouts</li>
+      <li>Separates content from design</li>
+    </ul>
+
+    <!-- Why CSS is Used -->
+    <h2>Why CSS is Used</h2>
+    <p>
+      CSS is used to style HTML elements such as text, images, buttons, and
+      layouts. It allows developers to apply the same styles across multiple
+      pages, saving time and effort.
+    </p>
+
+    <ul>
+      <li>To add colors, fonts, and spacing</li>
+      <li>To design layouts and page structure</li>
+      <li>To maintain consistency across pages</li>
+      <li>To reduce repeated code</li>
+    </ul>
+
+    <!-- Inline CSS -->
+    <h2>1. Inline CSS</h2>
+    <p>
+      Inline CSS is written directly inside an HTML element using the
+      <strong>style</strong> attribute. It applies only to that element.
+    </p>
+
+    <div class="example">
+      <p style="color: red; font-weight: bold;">
+        This text is styled using Inline CSS
+      </p>
+    </div>
+
+    <!-- Internal CSS -->
+    <h2>2. Internal CSS</h2>
+    <p>
+      Internal CSS is written inside the <strong>&lt;style&gt;</strong> tag
+      in the head section of the HTML file. It affects only one page.
+    </p>
+
+    <div class="example">
+      <p class="internal-text">
+        This text is styled using Internal CSS
+      </p>
+    </div>
+
+    <!-- External CSS -->
+    <h2>3. External CSS</h2>
+    <p>
+      External CSS is written in a separate <strong>.css</strong> file and
+      linked to the HTML document. It is reusable for multiple pages.
+    </p>
+
+    <div class="example">
+      <p class="external-text">
+        This text is styled using External CSS
+      </p>
+    </div>
+
+    <!-- Comparison Table -->
+    <h2>Comparison Table</h2>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Inline CSS</th>
+        <th>Internal CSS</th>
+        <th>External CSS</th>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>Inside HTML tag</td>
+        <td>Inside &lt;style&gt;</td>
+        <td>Separate .css file</td>
+      </tr>
+      <tr>
+        <td>Scope</td>
+        <td>Single element</td>
+        <td>Single page</td>
+        <td>Multiple pages</td>
+      </tr>
+      <tr>
+        <td>Reusability</td>
+        <td>No</td>
+        <td>Limited</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Priority</td>
+        <td>High</td>
+        <td>Medium</td>
+        <td>Low</td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>
+</html>
