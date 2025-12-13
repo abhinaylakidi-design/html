@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to right, #eef2f3, #ffffff);
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #2980b9;
+      margin-top: 35px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .info-box {
+      background-color: #f0f6ff;
+      border-left: 6px solid #2980b9;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 6px;
+    }
+
+    /* =====================
+       FLEX CONTAINER STYLES
+    ====================== */
+
+    .flex-container {
+      display: flex;
+      gap: 15px;
+      background-color: #eef3f8;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .flex-item {
+      background-color: #2980b9;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: bold;
+      flex: 1;
+    }
+
+    /* Different flex examples */
+
+    .center {
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+    }
+
+    .wrap .flex-item {
+      min-width: 150px;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>CSS Flexbox</h1>
+
+  <!-- What is Flex -->
+  <h2>What is Flexbox?</h2>
+  <p>
+    Flexbox (Flexible Box Layout) is a CSS layout model used to design
+    responsive and flexible layouts easily. It allows elements to align,
+    distribute space, and adjust their size automatically.
+  </p>
+
+  <!-- Importance -->
+  <h2>Importance of Flexbox</h2>
+  <div class="info-box">
+    <ul>
+      <li>Makes layout creation simple and responsive</li>
+      <li>Allows easy horizontal and vertical alignment</li>
+      <li>Reduces complex CSS and float usage</li>
+      <li>Adjusts layout automatically for different screen sizes</li>
+    </ul>
+  </div>
+
+  <!-- Why Flex is Used -->
+  <h2>Why Flexbox is Used</h2>
+  <p>
+    Flexbox is mainly used to arrange items in rows or columns and control
+    spacing between them. It is ideal for navigation bars, cards, galleries,
+    and dashboards.
+  </p>
+
+  <p><strong>Key concept:</strong></p>
+  <div class="info-box">
+    <p>
+      Parent element → <code>display: flex;</code> (Flex Container)<br>
+      Child elements → Flex Items
+    </p>
+  </div>
+
+  <!-- Basic Flex Example -->
+  <h2>Basic Flex Example</h2>
+  <p>
+    By applying <code>display: flex</code> to a container, all its children
+    align in a row by default.
+  </p>
+
+  <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+  </div>
+
+  <!-- Centering -->
+  <h2>Centering with Flexbox</h2>
+  <p>
+    Flexbox makes both horizontal and vertical centering very easy.
+  </p>
+
+  <div class="flex-container center">
+    <div class="flex-item">Centered Item</div>
+  </div>
+
+  <!-- Space Between -->
+  <h2>Space Between Items</h2>
+  <p>
+    Using <code>justify-content: space-between</code>, space is distributed
+    evenly between items.
+  </p>
+
+  <div class="flex-container space-between">
+    <div class="flex-item">Left</div>
+    <div class="flex-item">Middle</div>
+    <div class="flex-item">Right</div>
+  </div>
+
+  <!-- Column Direction -->
+  <h2>Column Layout</h2>
+  <p>
+    Flexbox can also arrange items vertically using
+    <code>flex-direction: column</code>.
+  </p>
+
+  <div class="flex-container column">
+    <div class="flex-item">Top</div>
+    <div class="flex-item">Middle</div>
+    <div class="flex-item">Bottom</div>
+  </div>
+
+  <!-- Wrap -->
+  <h2>Flex Wrap</h2>
+  <p>
+    <code>flex-wrap: wrap</code> allows items to move to the next line when
+    space is not enough.
+  </p>
+
+  <div class="flex-container wrap">
+    <div class="flex-item">Box 1</div>
+    <div class="flex-item">Box 2</div>
+    <div class="flex-item">Box 3</div>
+    <div class="flex-item">Box 4</div>
+    <div class="flex-item">Box 5</div>
+  </div>
+
+  <!-- Conclusion -->
+  <h2>Conclusion</h2>
+  <p>
+    Flexbox is one of the most important CSS layout techniques. It simplifies
+    responsive design, reduces code complexity, and helps developers create
+    clean, flexible, and modern layouts efficiently.
+  </p>
+
+</div>
+
+</body>
+</html>
