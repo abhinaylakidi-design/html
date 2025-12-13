@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form>
+        <table border="2" width="45%" cellpadding="10" cellspacing="5" align="center" style="text-align: center;">
+            <tr><th colspan="2" style="background-color: rgb(127, 127, 242);"><h2>Signup Page</h2></th></tr>
+            <tr>
+                <td>
+                    <label for="Name"><b>Name:</b></label>
+                </td>
+                <td><input type="text" id="Name" placeholder="Enter your Name" ></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email"><b>Email ID:</b></label>
+                </td>
+                <td><input type="email" id="email" placeholder="john@demo.com" required autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td><label for="Mobile"><b>Mobile:</b></label></td>
+                <td><input type="tel" name="Mobile" id="Mobile" placeholder="Enter your Number"></td>
+            </tr>
+            <tr>
+                <td><label for="dob"><b>Date of Birth</b></label></td>
+                <td><input type="date" name="date" id="dob"></td>
+            </tr>
+            <tr>
+                <td><label for="age"><b>Age:</b></label></td>
+                <td><input type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td><label for="password"><b>Password</b></label></td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td><label for="doc"><b>Resume:</b></label></td>
+                <td><input type="file" id="doc"></td>
+            </tr>
+            <tr>
+                <td><label for="add"><b>Address:</b></label></td>
+                <td><textarea name="address" id="add" rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button style="background-color: lightgrey;"><b><h3>reset</h3></b></button><button style="background-color: lightgray;"><b><h3>Submit</h3></b></button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
