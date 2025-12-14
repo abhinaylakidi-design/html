@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #1e88e5;
+    }
+
+    .box {
+      width: 150px;
+      height: 80px;
+      margin: 20px 0;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* ---------------------------------
+       BASIC KEYFRAMES
+    ---------------------------------- */
+    @keyframes colorChange {
+      from { background: #29b6f6; }
+      to { background: #0288d1; }
+    }
+
+    .basic {
+      animation-name: colorChange;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    /* ---------------------------------
+       MOVE ANIMATION
+    ---------------------------------- */
+    @keyframes moveRight {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(200px); }
+    }
+
+    .linear {
+      animation: moveRight 2s linear infinite;
+      background: #8bc34a;
+    }
+
+    .ease {
+      animation: moveRight 2s ease infinite;
+      background: #03a9f4;
+    }
+
+    /* ---------------------------------
+       ALTERNATE DIRECTION
+    ---------------------------------- */
+    .alternate {
+      animation: moveRight 2s ease-in-out infinite alternate;
+      background: #f44336;
+    }
+
+    /* ---------------------------------
+       FILL MODE
+    ---------------------------------- */
+    @keyframes scaleUp {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .fill {
+      animation: scaleUp 1.5s ease forwards;
+      background: #4caf50;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>CSS Animations</h1>
+
+<div class="box basic">Basic</div>
+<div class="box linear">Linear</div>
+<div class="box ease">Ease</div>
+<div class="box alternate">Alternate</div>
+<div class="box fill">Fill Mode</div>
+
+</body>
+</html>
