@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #1e88e5;
+    }
+
+    .box {
+      width: 150px;
+      height: 80px;
+      margin: 20px 0;
+      background: #42a5f5;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* ---------------------------------
+       BASIC TRANSITION
+       transition-property + duration
+    ---------------------------------- */
+    .basic {
+      transition-property: background-color;
+      transition-duration: 0.5s;
+    }
+
+    .basic:hover {
+      background-color: #1e88e5;
+    }
+
+    /* ---------------------------------
+       TRANSITION: ALL
+    ---------------------------------- */
+    .all {
+      transition: all 0.5s ease;
+    }
+
+    .all:hover {
+      width: 220px;
+      background: #2e7d32;
+    }
+
+    /* ---------------------------------
+       TIMING FUNCTIONS
+    ---------------------------------- */
+    .ease { transition: transform 0.6s ease; background: #ab47bc; }
+    .linear { transition: transform 0.6s linear; background: #5c6bc0; }
+    .ease-in { transition: transform 0.6s ease-in; background: #ff7043; }
+    .ease-out { transition: transform 0.6s ease-out; background: #26a69a; }
+    .ease-in-out { transition: transform 0.6s ease-in-out; background: #78909c; }
+
+    .move:hover {
+      transform: translateX(150px);
+    }
+
+    /* ---------------------------------
+       TRANSITION DELAY
+    ---------------------------------- */
+    .delay {
+      background: #ec407a;
+      transition: transform 0.5s ease 0.5s;
+      /* delay = 0.5 seconds */
+    }
+
+    .delay:hover {
+      transform: scale(1.3);
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>CSS Transitions</h1>
+
+<div class="box basic">Basic</div>
+<div class="box all">All</div>
+
+<div class="box ease move">Ease</div>
+<div class="box linear move">Linear</div>
+<div class="box ease-in move">Ease-In</div>
+<div class="box ease-out move">Ease-Out</div>
+<div class="box ease-in-out move">Ease-In-Out</div>
+
+<div class="box delay">Delay</div>
+
+</body>
+</html>
