@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    /* ---------- BASIC PAGE STYLING ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f8;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+    }
+
+    /* ---------- BOX MODEL STRUCTURE ---------- */
+
+    /* MARGIN → space outside the element */
+    .margin-box {
+      margin: 40px;
+      background-color: #ffd6d6;
+      padding: 20px;
+    }
+
+    /* BORDER → boundary around the element */
+    .border-box {
+      border: 5px solid #ff4d4d;
+      background-color: #ffecec;
+      padding: 20px;
+    }
+
+    /* PADDING → space between border and content */
+    .padding-box {
+      padding: 20px;
+      background-color: #d6f5ff;
+    }
+
+    /* CONTENT → actual content area */
+    .content-box {
+      background-color: #4da6ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* ---------- BOX SIZING EXAMPLE ---------- */
+    .box-sizing-demo {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid black;
+      margin-top: 30px;
+      background-color: #d9fdd3;
+
+      /* IMPORTANT PROPERTY */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Box Model</h1>
+  <p>Every HTML element is a rectangular box made up of these layers</p>
+
+  <!-- BOX MODEL VISUALIZATION -->
+  <div class="margin-box">
+    <strong>Margin</strong> (space outside the element)
+
+    <div class="border-box">
+      <strong>Border</strong> (outline of the element)
+
+      <div class="padding-box">
+        <strong>Padding</strong> (space inside the border)
+
+        <div class="content-box">
+          Content (Text / Image / Element)
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- BOX SIZING EXPLANATION -->
+  <h2>box-sizing: border-box</h2>
+  <p>
+    With <b>box-sizing: border-box</b>, the width includes
+    <b>padding + border</b>
+  </p>
+
+  <div class="box-sizing-demo">
+    This box has:
+    <br>Width: 300px
+    <br>Padding: 20px
+    <br>Border: 5px
+  </div>
+
+</body>
+</html>
