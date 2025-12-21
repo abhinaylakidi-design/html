@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+    <style>
+        .gridcontainer{
+            display: grid;
+            background-color: rgb(188, 177, 177);
+            border: 2px solid black;
+            width: 100%;
+            height: 1100px;
+            justify-items: center;
+            grid-template-columns: repeat(2,1fr);
+        }
+        #circle{
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+            border-radius: 50%;
+            align-content: center;
+            text-align: center;
+            margin-top: 40px;
+            background-color: chocolate;
+            color: black;
+            font-size: larger;
+        }
+        #square{
+             width: 300px;
+            height: 300px;
+            border: 3px solid black;
+            border-radius: 5px;
+            align-content: center;
+            text-align: center;
+            margin-top: 40px;
+            color: blue;
+            background-color: azure;
+            font-size: large;
+        }
+        #rectangle{
+              width: 500px;
+            height: 300px;
+            border: 3px solid black;
+            border-radius: 5px;
+            align-content: center;
+            text-align: center;
+            margin-top: 40px;
+            color: rgb(255, 0, 0);
+            background-color: rgb(82, 180, 216);
+            font-size: large;
+        }
+        #eclipse{
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            width: 300px;
+            height: 200px;
+            border: 3px solid black;
+            border-radius: 50%;
+            align-content: center;
+            text-align: center;
+            margin-top: 40px;
+            background-color: rgb(74, 211, 77);
+            color: rgb(255, 0, 0);
+            font-size: larger;
+        }
+        
+    </style>
+<body>
+    <section class="gridcontainer">
+        <div class="grid-items" id="circle"><b>Circle</b></div>
+        <div class="grid-items" id="square"><b>Square</b></div>
+        <div class="grid-items" id="rectangle"><b>Rectangle</b></div>
+        <div class="grid-items" id="eclipse"><b>Eclipse</b></div>
+    </section>
+</body>
+
+</html>
